@@ -1,0 +1,10 @@
+#!/bin/bash
+
+curl --location --request GET '127.0.0.1:8080/fabric/lifecycle/approve' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "cc_name": "basic",
+  "channel_name": "mychannel"
+}'
+
+curl --location --request POST '127.0.0.1:8080/fabric/lifecycle/install/basic.tar.gz'
